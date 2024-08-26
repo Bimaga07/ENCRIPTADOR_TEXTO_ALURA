@@ -29,3 +29,17 @@ function copiarTexto() {
     document.execCommand("copy");
     alert("Texto copiado: " + texto.value);
 }
+
+document.getElementById("input-text").addEventListener("input", function() {
+    let texto = this.value;
+    let outputImage = document.querySelector(".output-image");
+    let outputTextArea = document.getElementById("output-text");
+
+    if (texto === "") {
+        outputImage.style.display = "block";
+        outputTextArea.style.display = "none";
+    } else {
+        outputImage.style.display = "none";
+        outputTextArea.style.display = "block";
+    }
+});

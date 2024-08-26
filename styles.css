@@ -1,52 +1,145 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #D8DFE8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*.container {
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.header .logo {
+    width: 70px;
+    margin-bottom: 5px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-}*/
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
 }
 
-textarea {
-    width: 90%;
-    height: 80px;
-    margin-bottom: 10px;
+.text-input-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.text-input {
+    width: 100%;
+    height: 700px;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
     resize: none;
 }
 
 .buttons {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-button {
-    background-color: #6200ea;
-    color: white;
-    border: none;
+.encrypt-btn, .decrypt-btn, .copy-btn {
     padding: 10px 20px;
-    border-radius: 4px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00308F;
+    color: white;
+    font-size: 1rem;
     cursor: pointer;
-    margin: 5px;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #3700b3;
+.decrypt-btn {
+    background-color: #5a6268;
+}
+
+.encrypt-btn:hover {
+    background-color: #001f5b;
+}
+
+.decrypt-btn:hover {
+    background-color: #343a40;
+}
+
+.output-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.output-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+#output-text {
+    display: none; /* Ocultar el textarea por defecto */
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.message {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 10px;
+}
+
+.copy-btn {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .text-input-section {
+        padding-right: 0;
+    }
+
+    .output-section {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .encrypt-btn, .decrypt-btn, .copy-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

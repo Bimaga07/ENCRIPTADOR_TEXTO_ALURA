@@ -8,15 +8,27 @@
 </head>
 <body>
     <div class="container">
-        <h1>Encriptador de Texto</h1>
-        <textarea id="input-text" placeholder="Ingrese el texto aquí"></textarea>
-        <div class="buttons">
-            <button onclick="encriptar()">Encriptar</button>
-            <button onclick="desencriptar()">Desencriptar</button>
-        </div>
-        <textarea id="output-text" placeholder="Resultado" readonly></textarea>
-        <button id="copy" onclick="copiarTexto()">Copiar</button>
+        <header class="header">
+            <img src="./imagenes/image.png" alt="Logo" class="logo">
+        </header>
+        <main class="main-content">
+            <section class="text-input-section">
+                <textarea id="input-text" class="text-input" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="buttons">
+                    <button class="encrypt-btn" onclick="encriptar()">Encriptar</button>
+                    <button class="decrypt-btn" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </section>
+            <section class="output-section">
+                <img src="./imagenes/image copy.png" alt="Imagen de diamante" class="output-image">
+                <textarea id="output-text" class="text-output" placeholder="Resultado" readonly></textarea>
+                <p class="message">Ningún mensaje fue encontrado. <br>Ingrese el texto que desees encriptar o desencriptar.</p>
+                <button class="copy-btn" onclick="copiarTexto()">Copiar</button>
+               
+            </section>
+        </main>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
